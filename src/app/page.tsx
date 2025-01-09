@@ -107,8 +107,8 @@ export default function Home() {
             Experience
           </h2>
           <div className="space-y-4">
-            {experiences.map((experience) => (
-              <Card>
+            {experiences.map((experience, index) => (
+              <Card key={index}>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold">{experience.title}</h3>
                   <p className="text-muted-foreground">{experience.date}</p>
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">Get in Touch</h2>
           <p className="mb-6">
-            I'm always open to new opportunities and collaborations.
+            I&apos;m always open to new opportunities and collaborations.
           </p>
           <Button>
             <Link href="mailto:mendozadibjoaquin@gmail.com">Contact Me</Link>
